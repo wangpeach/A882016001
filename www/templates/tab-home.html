@@ -1,0 +1,319 @@
+<ion-view view-title="首页" hide-nav-bar="true">
+       <ion-content delegate-handle="scroll-ct">
+              <!-- <ion-refresher on-refresh="doRefresh()">
+              </ion-refresher> -->
+              <div class="carousel">
+                     <ion-slide-box auto-play="true" does-continue="true">
+                            <ion-slide>
+                                   <img src="http://117.34.70.172/uploadimages/yhtxmb/banner1.jpg" width="100%" class="banner_1" />
+                            </ion-slide>
+                            <ion-slide>
+                                   <img src="http://117.34.70.172/uploadimages/yhtxmb/banner2.jpg" width="100%" height="150px" class="banner_2" />
+                            </ion-slide>
+                            <ion-slide>
+                                   <img src="http://117.34.70.172/uploadimages/yhtxmb/banner3.jpg" width="100%" height="150px" class="banner_3" />
+                            </ion-slide>
+                     </ion-slide-box>
+              </div>
+              <div class="search-home">
+                     <form ng-submit="search(searchSender)">
+                            <input type="text" placeholder="{{searchSender.placeholder}}" ng-model="searchSender.key" class="inp">
+                            <button type="submit" value="" class="btn"></button>
+                     </form>
+              </div>
+              <ul class="ul-menu-n">
+                     <li>
+                            <a ng-click="varificationModel(true, 'tab.sort')">
+                                   <img src="img/ico-m1.png" alt="">
+                                   <p>分类查询</p>
+                            </a>
+                     </li>
+                     <!-- <li>
+                            <a ng-click="varificationModel(false, '敬请期待')">
+                                   <img src="img/ico-m2.png" alt="">
+                                   <p>物流查询</p>
+                            </a>
+                     </li> -->
+                     <li>
+                            <a ng-click="varificationModel(true, 'tab.cart')">
+                                   <img src="img/ico-m3.png" alt="">
+                                   <p>购物车</p>
+                            </a>
+                     </li>
+                     <li>
+                            <a ng-click="varificationModel(true, 'tab.account')">
+                                   <img src="img/ico-m4.png" alt="">
+                                   <p>个人中心</p>
+                            </a>
+                     </li>
+                    <!--  <li>
+                            <a ng-click="varificationModel(false, '敬请期待')">
+                                   <img src="img/ico-m5.png" alt="">
+                                   <p>我的红包</p>
+                            </a>
+                     </li>
+                     <li>
+                            <a ng-click="varificationModel(false, '敬请期待')">
+                                   <img src="img/ico-m6.png" alt="">
+                                   <p>我的卡券</p>
+                            </a>
+                     </li>
+                     <li>
+                            <a ng-click="varificationModel(false, '敬请期待')">
+                                   <img src="img/ico-m7.png" alt="">
+                                   <p>云惠超市</p>
+                            </a>
+                     </li> -->
+                     <li>
+                            <!-- #/tab/account/tab.mychilds-list -->
+                            <a href="#/tab/account?where=tab.mychilds-list">
+                                   <img src="img/ico-m8.png" alt="">
+                                   <p>我的团队</p>
+                            </a>
+                     </li>
+              </ul>
+              <div class="c"></div>
+              <!-- <div class="news-hot">
+                     <strong>云惠<img src="img/toutiao.png" alt=""></strong>
+                     <div class="slide-txt">
+                            <div class="swiper-wrapper">
+                                   <div class="swiper-slide home-item " ng-repeat="item in bullentin"><span>{{item.name}}</span><a href="">{{item.brief}}</a></div>
+                            </div>
+                     </div>
+              </div> -->
+              <div class="c"></div>
+              <h2 class="tit1-n"><span class="ico1">今日折扣</span></h2>
+              <div class="list1-n">
+                     <ul ng-style="ad_height">
+                            <li>
+                                   <a ng-href="#/tab/home/productDetails/direct/1048">
+                                          <img src="http://117.34.70.172/uploadimages/yunhuitianxia/50628305209f40bbafc53a6331299a01.png" alt="">
+                                          <p>美的(Midea) 空调扇 AC100-T 单冷</p>
+                                          <!-- <span>5折<em>起</em></span> -->
+                                   </a>
+                            </li>
+                            <li>
+                                   <a ng-href="#/tab/home/productDetails/direct/807">
+                                          <img src="http://117.34.70.172/uploadimages/yunhuitianxia/63748bccbdb84ea9a8ce96c1f3c0c63e.jpg" alt="">
+                                          <p>好视力 美式 落地灯 客厅卧室书房现代简约工作阅读LED铁艺落地台灯TG835-WH</p>
+                                          <!-- <span>7折<em>起</em></span> -->
+                                   </a>
+                            </li>
+                            <li>
+                                   <a ng-href="#/tab/home/productDetails/direct/573">
+                                          <img src="http://117.34.70.172/uploadimages/yunhuitianxia/799fc476ded144729f73b17e50997d73.jpg" alt="">
+                                          <p>李宁漫威系列男子经典休闲鞋</p>
+                                          <!-- <span>8折<em>起</em></span> -->
+                                   </a>
+                            </li>
+                            <li>
+                                   <a ng-href="#/tab/home/productDetails/direct/326">
+                                          <img src="http://117.34.70.172/uploadimages/yunhuitianxia/caf29f9549174a00a8fe93d3457dea4f.png" alt="">
+                                          <p>十字架兔毛绒宽松圆领套头针织衫短款兔绒毛衣女款冬季粉色玫红色</p>
+                                          <!-- <span>7折<em>起</em></span> -->
+                                   </a>
+                            </li>
+                     </ul>
+              </div>
+              <!-- 今日折扣 end -->
+              <!-- <div class="c"></div>
+              <h2 class="tit1-n"><span class="ico2">品牌特惠</span></h2>
+              <div class="list2-n">
+                     <ul ng-style="ad_height">
+                            <ion-scroll direction="x" style="width: 100%;">
+                                   <li>
+                                          <div class="logo">
+                                                 <a href=""><img src="img/list-logo1.jpg" alt=""></a>
+                                          </div>
+                                          <div class="list">
+                                                 <div class="home-item">
+                                                        <a href="">
+                                                               <img src="img/p2.jpg" alt="">
+                                                               <span><em style="background:#ff6563;"></em><b>雷赛沙发</b></span>
+                                                        </a>
+                                                 </div>
+                                                 <div class="home-item">
+                                                        <a href="">
+                                                               <img src="img/p2.jpg" alt="">
+                                                               <span><em style="background:#ffa200;"></em><b>极鼎家具</b></span>
+                                                        </a>
+                                                 </div>
+                                          </div>
+                                   </li>
+                                   <li>
+                                          <div class="logo">
+                                                 <a href=""><img src="img/list-logo1.jpg" alt=""></a>
+                                          </div>
+                                          <div class="list">
+                                                 <div class="home-item">
+                                                        <a href="">
+                                                               <img src="img/p2.jpg" alt="">
+                                                               <span><em style="background:#5f9305;"></em><b>时尚潮男</b></span>
+                                                        </a>
+                                                 </div>
+                                                 <div class="home-item">
+                                                        <a href="">
+                                                               <img src="img/p2.jpg" alt="">
+                                                               <span><em style="background:#1a93d9;"></em><b>潮妹搭配</b></span>
+                                                        </a>
+                                                 </div>
+                                          </div>
+                                   </li>
+                                   <li>
+                                          <div class="logo">
+                                                 <a href=""><img src="img/list-logo1.jpg" alt=""></a>
+                                          </div>
+                                          <div class="list">
+                                                 <div class="home-item">
+                                                        <a href="">
+                                                               <img src="img/p2.jpg" alt="">
+                                                               <span><em style="background:#8720e8;"></em><b>玩具宝盒</b></span>
+                                                        </a>
+                                                 </div>
+                                                 <div class="home-item">
+                                                        <a href="">
+                                                               <img src="img/p2.jpg" alt="">
+                                                               <span><em style="background:#1a93d9;"></em><b>潮妹搭配</b></span>
+                                                        </a>
+                                                 </div>
+                                          </div>
+                                   </li>
+                            </ion-scroll>
+                     </ul>
+              </div> -->
+
+              <!-- 品牌特惠 end -->
+              <!-- <div class="c"></div>
+              <h2 class="tit1-n"><span class="ico3">国际海淘</span></h2>
+              <div class="list3-n">
+                     <ul ng-style="ad_height">
+                            <ion-scroll direction="x" style="width: 100%;">
+                                   <li>
+                                          <a href="">
+                                                 <img src="img/p3.jpg" alt="">
+                                                 <span><em style="background:#48baf8;"></em><b>热门</b></span>
+                                          </a>
+                                   </li>
+                                   <li>
+                                          <a href="">
+                                                 <img src="img/p3.jpg" alt="">
+                                                 <span><em style="background:#ff3a00;"></em><b>新品</b></span>
+                                          </a>
+                                   </li>
+                                   <li>
+                                          <a href="">
+                                                 <img src="img/p3.jpg" alt="">
+                                                 <span><em style="background:#ff3a00;"></em><b>新品</b></span>
+                                          </a>
+                                   </li>
+                            </ion-scroll>
+                     </ul>
+              </div> -->
+
+              <!-- 国际海淘 end -->
+              <!-- <div class="c"></div>
+              <h2 class="tit1-n"><span class="ico4">特卖专场</span></h2>
+              <div class="list4-n">
+                     <ul ng-style="ad_height">
+                            <ion-scroll direction="x" style="width: 100%;">
+                                   <li>
+                                          <a href="">
+                                                 <img src="img/p4.jpg" alt="">
+                                          </a>
+                                   </li>
+                                   <li>
+                                          <a href="">
+                                                 <img src="img/p4.jpg" alt="">
+                                          </a>
+                                   </li>
+                                   <li>
+                                          <a href="">
+                                                 <img src="img/p4.jpg" alt="">
+                                          </a>
+                                   </li>
+                                   <li>
+                                          <a href="">
+                                                 <img src="img/p4.jpg" alt="">
+                                          </a>
+                                   </li>
+                                   <li>
+                                          <a href="">
+                                                 <img src="img/p4.jpg" alt="">
+                                          </a>
+                                   </li>
+                                   <li>
+                                          <a href="">
+                                                 <img src="img/p4.jpg" alt="">
+                                          </a>
+                                   </li>
+                            </ion-scroll>
+                     </ul>
+              </div> -->
+              <!-- 特卖专场 end -->
+
+              <!-- <div class="c"></div>
+              <h2 class="tit1-n"><span class="ico5">限时抢购</span></h2>
+              <div class="list5-n">
+                     <ul ng-style="ad_height">
+                            <li>
+                                   <a href="">
+                                          <h4>限时抢购</h4>
+                                          <p>还剩余：<span>1小时30分</span>开始抢购</p>
+                                          <span class="price">
+                                                  <em>¥680.<i>00元</i></em><br>
+                                                  ¥223.<i>00元</i>
+                                              </span>
+                                          <span class="pic">
+                                                  <img src="img/p5.jpg" alt="">
+                                              </span>
+                                   </a>
+                            </li>
+                            <li>
+                                   <a href="">
+                                          <h4>限时抢购</h4>
+                                          <div class="time-span">
+                                                 <span class="day">02天</span> :
+                                                 <span class="hour">02时</span> :
+                                                 <span class="minute">20分</span>
+                                          </div>
+                                          <span class="price">
+                            <em>¥680.<i>00元</i></em><br>
+                            ¥223.<i>00元</i>
+                        </span>
+                                          <span class="pic">
+                            <img src="img/p5.jpg" alt="">
+                        </span>
+                                   </a>
+                            </li>
+                     </ul>
+              </div>
+              <div class="c"></div> -->
+              <!-- 限时抢购 end -->
+
+              <h2 class="tit1-n"><span class="ico6">猜你喜欢</span></h2>
+              <ul class="list6-n">
+                     <li ng-repeat="item in products">
+                            <a nav-transition="ios" ng-href="#/tab/home/productDetails/direct/{{item.productid}}" nav-direction="forward">
+                                   <div class="pic">
+                                          <img src="{{item.productimgurl}}" alt="">
+                                   </div>
+                                   <div class="txt">
+                                          <h4>{{item.productname}}</h4>
+                                          <p>
+                                                 <b>
+                                                               <i>¥</i>{{item.productprice}}
+                                                 </b>
+                                                 <i class="flower-zeng">赠</i>
+                                                 <!-- <span>好评度: {{goodDegree(item)}}%</span> -->
+                                                 <!-- <em>{{item.productzhekou}}折</em> -->
+                                                 <!-- <span>库存<i>{{item.productstock}}</i></span> -->
+                                          </p>
+                                   </div>
+                            </a>
+                     </li>
+              </ul>
+              <!-- 猜你喜欢 end -->
+              </div>
+              </div>
+       </ion-content>
+</ion-view>

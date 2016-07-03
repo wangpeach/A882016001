@@ -1,0 +1,46 @@
+<ion-view view-title="余额提现">
+        <ion-nav-buttons side="secondary">
+                <a class="button" href="#/tab/account/apply.explain">提现说明</a>
+        </ion-nav-buttons>
+        <ion-content>
+                <div style="text-align: center;  border-bottom: 1px solid #e6e6e6; background-color: white; padding-top: 1rem;">
+                        <h4>账户余额</h4>
+                        <h3 style="color: red;">{{balance}}</h3>
+                </div>
+                <form name="wdform" ng-submit="_withdraw(withdraw)">
+                        <div class="list">
+                                <label class="item item-input item-select">
+                                        <div class="input-label">开户总行</div>
+                                        <select ng-model="withdraw.bankname">
+                                                <option ng-repeat="other in banks" item="other" value="{{other.bankname}}">
+                                                        {{other.bankname}}
+                                                </option>
+                                        </select>
+                                </label>
+                                <label class="item item-input">
+                                        <span class="input-label">开户支行</span>
+                                        <input type="text" ng-model="withdraw.bankaddress">
+                                </label>
+                                <label class="item item-input">
+                                        <span class="input-label">银行帐号</span>
+                                        <input type="text" pattern="^\d{19}$" required ng-model="withdraw.bankcard">
+                                </label>
+                                <label class="item item-input">
+                                        <span class="input-label">提现人姓名</span>
+                                        <input type="text" required ng-model="withdraw.username">
+                                </label>
+                                <label class="item item-input">
+                                        <span class="input-label">支付密码</span>
+                                        <input type="password" required ng-model="withdraw.password" placeholder="如没有设置，请输入登录密码">
+                                </label>
+                                <label class="item item-input">
+                                        <span class="input-label">提现金额</span>
+                                        <input type="number" min="100" max="{{balance}}" step="0.01" required ng-model="withdraw.amount">
+                                </label>
+                                <button ng-disabled="wdform.$invalid" type="submit" class="button button-block button-positive">
+                                        确定提现
+                                </button>
+                        </div>
+                </form>
+        </ion-content>
+</ion-view>

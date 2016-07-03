@@ -1,0 +1,126 @@
+<ion-view view-title="我的" hide-nav-bar="true">
+        <ion-content>
+                <ion-refresher ng-if="signed" pulling-text="松开刷新" on-refresh="doRefresh()" disable-pulling-rotation="true" >
+                </ion-refresher>
+                <!-- 已登录 -->
+                <div class="animate-repeat" ng-if="signed">
+                        <div class="plsummary">
+                                <div class="head">
+                                        <img style="width: 60px; height: 60px; position: absolute;" ng-src="{{user.userheader}}" alt="">
+                                </div>
+                                <div class="sussmary">
+                                        <ul>
+                                                <li>
+                                                        <a style="font-size: 20px; float: right; " ng-href="#/tab/account/setting">
+                                                                <i class="icon-permissions-outline"></i>
+                                                        </a>
+                                                </li>
+                                                <li>{{user.username}}</li>
+                                                <li>
+                                                        <a style="float: right;" href="#/tab/account/upgrade" ng-if="user.userroles.type == '2' ? false : true" ng-class="animate-repeat">
+                                                                账户升级<i class="ion-ios-arrow-right"></i>
+                                                        </a>
+                                                </li>
+                                                <li>{{user.userroles.typename}}</li>
+                                                <li></li>
+                                        </ul>
+                                </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="account-balace" style=" height: 50px; border-bottom: 1px solid #eee;">
+                                <ul class="point">
+                                        <li>账户余额：
+                                                <span id="surplus">{{balance}}</span>
+                                        </li>
+                                        <li style="text-align: right;">
+                                                <button class="button button-clear button-small  button-positive button-icon-right" style="margin-top: 15px;" ng-click="changeBalance($event)">
+                                                        <i style="font-size: 20px;" class="{{showBalance}}"></i>
+                                                </button>
+                                        </li>
+                                </ul>
+                        </div>
+                        <div class="account-balace" style=" height: 40px;">
+                                <ul class="point">
+                                        <li>白积分：{{user.userbaijifen}}</li>
+                                        <li style="text-align: right;">红积分：{{user.userhongjifen}}</li>
+                                </ul>
+                        </div>
+                </div>
+                <!-- END -->
+                <!-- 未登录 -->
+                <div class="animate-repeat" ng-if="!signed">
+                        <div class="plsummary">
+                                <div class="head">
+                                        <a ng-click="signOrReg()">
+                                                <img src="img/iconfont-myfill2.png" alt=""> 
+                                        </a>
+                                </div>
+                                <div class="sussmary">
+                                        <ul class="signin">
+                                                <li></li>
+                                                <li></li>
+                                                <li>
+                                                        <a class="logreg" ng-click="signOrReg()">登录/注册</a>
+                                                </li>
+                                                <li></li>
+                                                <li></li>
+                                        </ul>
+                                </div>
+                        </div>
+                </div>
+                <!-- END -->
+                <div class="clear"></div>
+                <!-- 功能模块 -->
+                <table class="auto_box_table">
+                        <tr>
+                                <td align="center">
+                                        <a ng-click="varificationModel('tab.account-apply-choose')">
+                                                <img src="http://117.34.70.172/uploadimages/yhtxmb/icon_tixian.png" alt="" />
+                                                <label>余额提现</label>
+                                        </a>
+                                </td>
+                                <td align="center">
+                                        <a ng-click="varificationModel('tab.point-white-list', {refresh: true})">
+                                                <img src="http://117.34.70.172/uploadimages/yhtxmb/icon_jifen.png" alt="" />
+                                                <label>白积分明细</label>
+                                        </a>
+                                </td>
+                                <td align="center">
+                                        <a ng-click="varificationModel('tab.point-red-list', {refresh: true})">
+                                                <img src="http://117.34.70.172/uploadimages/yhtxmb/icon_wodequanyi.png" alt="" />
+                                                <label>红积分明细</label>
+                                        </a>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td align="center">
+                                        <a ng-click="varificationModel('tab.assets-list')">
+                                                <img src="http://117.34.70.172/uploadimages/yhtxmb/icon_zunxiangjieshao.png" alt="" />
+                                                <label>资金明细</label>
+                                        </a>
+                                </td>
+                                <td align="center">
+                                        <a ng-click="varificationModel('tab.mychilds-list')">
+                                                <img src="http://117.34.70.172/uploadimages/yhtxmb/icon_zhuanjiayuyue.png" alt="" />
+                                                <label>我的推荐会员</label>
+                                                <p></p>
+                                        </a>
+                                </td>
+                                <td align="center">
+                                        <a ng-click="varificationModel('tab.myorder')">
+                                                <img src="http://117.34.70.172/uploadimages/yhtxmb/icon_quanyi.png" alt="" />
+                                                <label>我的订单</label>
+                                        </a>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td align="center">
+                                        <a ng-click="varificationModel('tab.mycode')">
+                                                <img src="http://117.34.70.172/uploadimages/yhtxmb/icon_erweima.png" alt="" />
+                                                <label>推荐二维码</label>
+                                        </a>
+                                </td>
+                        </tr>
+                </table>
+        </ion-content>
+</ion-view>

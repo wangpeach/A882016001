@@ -1,0 +1,32 @@
+<ion-view view-title="红积分明细">
+        <ion-nav-buttons side="right">
+                <button class="button" ng-click="cashhub()">
+                        兑换中心
+                </button>
+        </ion-nav-buttons>
+        <ion-content>
+                <ion-refresher pulling-text="松开刷新" on-refresh="doRefresh()" disable-pulling-rotation="true"></ion-refresher>
+                        <ion-list ng-repeat="item in items" item="item">
+                                <ion-item ng-repeat="other in item" class="pointItem">
+                                        <ul class="data-col">
+                                                <li>{{fd(other.createdate)}}</li>
+                                                <li>{{td(other.createdate)}}</li>
+                                        </ul>
+                                        <ul class="data-col">
+                                                <li>{{other.status}}</li>
+                                        </ul>
+                                        <ul class="data-col">
+                                                <li style="color: red;">{{other.hongjifenamount}}</li>
+                                        </ul>
+                                </ion-item>
+                        </ion-list>
+                        <ul>
+                                <li class="animate-repeat" ng-if="!moreDataCanBeLoaded" style="width: 100%; box-shadow: none;">
+                                        <div class="nothing">
+                                                <p>没有更多了</p>
+                                        </div>
+                                </li>
+                        </ul>
+                        <ion-infinite-scroll ng-if="moreDataCanBeLoaded" on-infinite="loadMore()" distance="5%"></ion-infinite-scroll>
+        </ion-content>
+</ion-view>

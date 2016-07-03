@@ -1,0 +1,19 @@
+<ion-view view-title="红积分兑换">
+        <ion-content>
+                <form name="cashform" ng-submit="exchangeRedPoint(cash)">
+                        <div class="list">
+                                <label class="item item-input">
+                                        <span class="input-label">兑换数量</span>
+                                        <input type="number" required min="10000" max="{{redresidue}}" step="0.01" placeholder="兑换红积分必须大于10000" ng-model="cash.rpt_num">
+                                </label>
+                                <button ng-disabled="cashform.$invalid" type="submit" class="button button-block button-outline button-assertive">
+                                        兑&nbsp;&nbsp;&nbsp;&nbsp;换
+                                </button>
+                        </div>
+                </form>
+                <ul class="cashprompt">
+                        <li>当前红积分：{{redresidue}}</li>
+                        <li>手续费比例 10%</li>
+                </ul>
+        </ion-content>
+</ion-view>

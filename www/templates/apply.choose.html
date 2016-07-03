@@ -1,0 +1,9 @@
+<ion-view view-title="提现类型">
+        <ion-content>
+                <ion-list>
+                        <ion-radio ng-model="data.choice" ng-value="'bank'">银行卡</ion-radio>
+                        <ion-radio ng-model="data.choice" ng-value="'alipay'">支付宝</ion-radio>
+                </ion-list>
+                <button class="button button-block button-assertive" ng-click="next(data)">下一步</button>
+        </ion-content>
+</ion-view>
