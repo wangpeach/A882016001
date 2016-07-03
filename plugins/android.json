@@ -1,0 +1,62 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-alipay-base": {
+            "ALI_PID": "2088121649705142",
+            "PACKAGE_NAME": "com.xaruike.yunhuitianxia"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.xaruike.yunhuitianxia"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.xaruike.yunhuitianxia"
+        },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "com.xaruike.yunhuitianxia"
+        },
+        "cordova-plugin-crosswalk-webview": {
+            "PACKAGE_NAME": "com.xaruike.yunhuitianxia"
+        },
+        "cordova-plugin-datepicker": {
+            "PACKAGE_NAME": "com.xaruike.yunhuitianxia"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.xaruike.yunhuitianxia"
+        },
+        "cordova-plugin-http": {
+            "PACKAGE_NAME": "com.xaruike.yunhuitianxia"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.xaruike.yunhuitianxia"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.xaruike.yunhuitianxia"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.xaruike.yunhuitianxia"
+        },
+        "cordova-plugin-x-toast": {
+            "PACKAGE_NAME": "com.xaruike.yunhuitianxia"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.xaruike.yunhuitianxia"
+        },
+        "phonegap-plugin-barcodescanner": {
+            "PACKAGE_NAME": "com.xaruike.yunhuitianxia"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.xaruike.yunhuitianxia"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.xaruike.yunhuitianxia"
+        }
+    }
+}
