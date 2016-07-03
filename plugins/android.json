@@ -29,9 +29,6 @@
         "cordova-plugin-device": {
             "PACKAGE_NAME": "com.xaruike.yunhuitianxia"
         },
-        "cordova-plugin-http": {
-            "PACKAGE_NAME": "com.xaruike.yunhuitianxia"
-        },
         "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "com.xaruike.yunhuitianxia"
         },
@@ -48,6 +45,9 @@
             "PACKAGE_NAME": "com.xaruike.yunhuitianxia"
         },
         "phonegap-plugin-barcodescanner": {
+            "PACKAGE_NAME": "com.xaruike.yunhuitianxia"
+        },
+        "cordova-plugin-http": {
             "PACKAGE_NAME": "com.xaruike.yunhuitianxia"
         }
     },

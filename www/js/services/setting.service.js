@@ -98,6 +98,7 @@ angular.module('setting.service', ['ionic'])
             sendRequest: function(server, params, headers) {
                 var that = this;
                 var defer = $q.defer();
+                
                 if($window.cordova && ionic.Platform.isIOS()) {
                     headers = (headers || {});
                     window.cordovaHTTP.post(that.getUrl(server), params, headers, function(response) {
