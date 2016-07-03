@@ -100,7 +100,7 @@ angular.module('setting.service', ['ionic'])
                 var defer = $q.defer();
                 if($window.cordova && ionic.Platform.isIOS()) {
                     headers = (headers || {});
-                    $window.CordovaHttpPlugin.post(that.getUrl(server), params, headers, function(response) {
+                    window.cordovaHTTP.post(that.getUrl(server), params, headers, function(response) {
                         defer.resolve(response);
                     }, function(response) {
                         defer.reject(response);
